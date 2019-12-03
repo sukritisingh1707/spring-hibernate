@@ -1,0 +1,38 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>    
+  
+        <h1>Add New Employee to Organization</h1>  
+       <form:form method="post" action="save">    
+        <table >    
+         <tr>    
+          <td>Name : </td>   
+          <td><form:input path="name"  /></td>  
+         </tr> 
+         <tr>
+         <td>
+         <div class="radio">
+         <label>Gender:<BR><form:radiobutton path="gender" value="Male"/>Male</label>
+         </div>
+        </td>
+         <td>
+         <div class="radio">
+         <label><br><form:radiobutton path="gender" value="Female"/>Female</label>
+         </div>
+        </td>
+         </tr>
+         <td>Date Of Birth</td>
+           <td><form:input  path="dob" date-provider="datepicker"/></td>
+         <tr>    
+          <td>Salary :</td>    
+          <td><form:input path="salary" /></td>  
+         </tr>   
+         <tr>    
+          <td>Designation :</td>    
+          <td><form:input path="designation" /></td>  
+         </tr>   
+         <tr>    
+          <td> </td>    
+          <td><input type="submit" value="Save" /></td>    
+         </tr>    
+        </table>    
+       </form:form> 
