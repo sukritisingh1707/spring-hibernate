@@ -18,8 +18,11 @@ import com.bean.Emp;
 @Transactional
 public class EmpDaoImpl implements EmpDao {
 
-	@Autowired
 	SessionFactory sessionFactory;
+
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
 
 	public int save(Emp p) {
 		try {
