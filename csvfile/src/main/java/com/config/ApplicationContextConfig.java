@@ -6,15 +6,17 @@ import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
-import com.dao.FileUploadDao;
+import com.csv.UploadFile;
 import com.dao.FileUploadDaoImpl;
-
+@Configuration
 public class ApplicationContextConfig {
+	
 	@Autowired
 	@Bean(name = "fileUploadDao")
-	public FileUploadDao getUserDao(SessionFactory sessionFactory) {
+	public FileUploadDaoImpl getUserDao(SessionFactory sessionFactory) {
 	    return new FileUploadDaoImpl(sessionFactory);
 	}
 	@Bean(name = "multipartResolver")
@@ -34,4 +36,5 @@ public class ApplicationContextConfig {
 	 
 	    return dataSource;
 	}
+
 }

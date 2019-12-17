@@ -6,4 +6,3 @@ public interface FileUploadDao {
     void save(UploadFile uploadFile);
 }
 
-
