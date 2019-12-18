@@ -5,6 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Upload Done</title>
+<style>
+h1{
+color: green;
+}
+</style>
 </head>
 <body>
     <div align="center">
@@ -14,4 +19,4 @@
 
 
 
-</html>
+</html> 
